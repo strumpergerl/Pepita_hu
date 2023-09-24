@@ -1,0 +1,56 @@
+.search-component {
+    input {
+        border-right: 0;
+        color: $color-art-primary;
+    }
+
+    input::placeholder {
+        color: $color-art-primary;
+    }
+
+    input:focus::placeholder {
+        transition: opacity .3s ease-in-out;
+        opacity: 0.2;
+    }
+
+
+    button {
+        border-left: 0;
+        border-color: $color-art-primary;
+        transition: all .3s ease-in-out;
+
+        svg {
+            stroke: $color-art-primary;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $color-art-primary;
+            border-color: $color-art-primary;
+            color: $color-art-light;
+
+            svg {
+                stroke: $color-art-light;
+            }
+        }
+    }
+
+    .offcanvas & {
+        .input-group-text {
+            border: none;
+            background-color: transparent;
+        }
+
+        input {
+            background-color: transparent;
+            border: 2px solid $color-art-light;
+            color: $color-art-light;
+        }
+
+        input::placeholder {
+            color: $color-art-light;
+        }
+    }
+}

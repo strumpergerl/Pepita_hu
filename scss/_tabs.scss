@@ -1,0 +1,24 @@
+.purchase-tab-nav {
+    border-bottom: 1px solid $color-art-light-gray;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .nav-link {
+        color: $color-art-light-gray;
+        font-size: $font-size-lg;
+        padding-bottom: 0;
+        transition: all .3s ease-in-out;
+
+        &.active {
+            border-bottom: 2px solid $color-art-primary;
+            margin-top: -8px;
+            padding-bottom: 8px;
+        }
+
+    }
+
+    &+.tab-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}

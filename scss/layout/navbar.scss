@@ -1,0 +1,105 @@
+.offcanvas {
+    background: $color-art-primary;
+    color: $color-art-light;
+    font-size: $font-size-lg;
+
+    &.show,
+    &.showing {
+        +main {
+            transition: transform .3s ease-in-out;
+            transform: translateX($offcanvas-horizontal-width);
+        }
+
+    }
+
+    &.hide,
+    &.hiding {
+        +main {
+            transition: transform .3s ease-in-out;
+            transform: translateX(0);
+        }
+    }
+
+    .navbar-nav {
+
+        // nav list with icons before text
+        li {
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                &:hover {
+                    background: $color-art-secondary;
+                }
+
+                span {
+                    width: 24px;
+                    text-align: center;
+                    display: inline-block;
+                    margin-right: 1.25rem;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    margin-left: 1.5rem;
+    position: relative;
+    height: 40px;
+
+    .toggler-line {
+        height: 2px;
+        width: 24px;
+        background: $color-art-secondary;
+        display: block;
+
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            margin-top: -6px;
+            left: 0;
+            height: 2px;
+            width: 24px;
+            background: $color-art-secondary;
+            display: block;
+            transition: all .3s ease-in-out;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            margin-top: 6px;
+            left: 0;
+            height: 2px;
+            width: 24px;
+            background: $color-art-secondary;
+            display: block;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    &:hover {
+        .toggler-line {
+            &::before {
+                margin-top: -8px;
+            }
+
+            &::after {
+                margin-top: 8px;
+            }
+        }
+    }
+}

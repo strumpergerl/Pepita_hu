@@ -1,0 +1,24 @@
+.btn {
+    &.btn-art-primary {
+        color: $color-art-light;
+        background: $color-art-primary;
+        border-color: $color-art-primary;
+        box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+        transition: all .1s ease-in-out;
+        font-size: $font-size-base;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-art-light;
+            background: $color-art-light;
+            border-color: $color-art-primary;
+            color: $color-art-primary;
+            box-shadow: 0rem 0.5rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
+        }
+
+        &:active {
+            box-shadow: 0rem 0.125rem 0.125rem 0rem rgba(0, 0, 0, 0.35);
+        }
+    }
+}

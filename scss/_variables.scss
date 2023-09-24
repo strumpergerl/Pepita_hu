@@ -1,0 +1,35 @@
+// colors
+$color-art-primary: #f44336;
+$color-art-secondary: #000000;
+$color-art-light: #ffffff;
+$color-art-gray: #979797;
+$color-art-light-gray: #d4d4d4;
+
+$primary: $color-art-primary;
+$secondary: $color-art-secondary;
+
+// font sizes
+$font-size-sm: 0.625rem;
+$font-size-base: 0.75rem !default;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.5rem;
+
+// font families
+$font-family-base: 'Montserrat', sans-serif !default;
+
+// navbar-toggler
+$navbar-toggler-padding-y: 0rem;
+$navbar-toggler-padding-x: 0rem;
+$navbar-toggler-font-size: $font-size-lg;
+$navbar-toggler-border-radius: 0;
+$navbar-toggler-focus-width: 0;
+$navbar-toggler-transition: box-shadow .15s ease-in-out;
+
+// borders
+$border-width: 2px;
+$border-color: $color-art-primary;
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+$border-radius-xl: 0;
+$border-radius-xxl: 0;

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+    <title>The Art Museum</title>
+</head>
+
+<body>
+    <div class="container mx-auto">
+
+        <header class="d-flex justify-content-between align-items-md-center mb-2">
+            <nav class="w-100 navbar fixed-top">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand" href="/">The<br /> Art<br /> Museum</a>
+                    <h1 class="page-title">Plan Your Visit</h1>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="toggler-line"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <section class="content">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-body">
+                    <form class="d-flex search-component mb-4" role="search">
+                        <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path id="Ellipse"
+                                    d="M7.33716 14.9706C10.4614 18.0948 15.5267 18.0948 18.6509 14.9706C21.7751 11.8464 21.7751 6.78106 18.6509 3.65686C15.5267 0.532663 10.4614 0.532663 7.33716 3.65686C4.21297 6.78106 4.21297 11.8464 7.33716 14.9706ZM7.33716 14.9706L1.6803 20.6274"
+                                    stroke="white" stroke-linecap="square" />
+                            </svg>
+                        </span>
+                        <input class="form-control form-control-lg me-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                    </form>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <span><img src="/img/icons/calendar.svg" alt="Exhibitions & Events"></span>
+                                Exhibitions & Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span><img src="/img/icons/artists.svg" alt="Artist & Artworks"></span>
+                                Artist & Artworks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span><img src="/img/icons/collections.svg" alt="Collections"></span>
+                                Collections</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span><img src="/img/icons/plans.svg" alt="Plan Your Visit"></span>
+                                Plan Your Visit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span><img src="/img/icons/member.svg" alt="Become a Member"></span>
+                                Become a Member</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span><img src="/img/icons/shop.svg" alt="Shop"></span>
+                                Shop</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <main class="pt-2">
+                <h1 class="h2">Skip the Line. <br /> Purchase Tickets.</h1>
+                <p class="text-primary w-75">All exhibitions, audio tours, and films included in the price of
+                    admission.
+                </p>
+                <!-- TABS -->
+                <ul class="nav nav-underline nav-fill purchase-tab-nav" id="daySelector" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="today-tab" data-bs-toggle="tab" data-bs-target="#today-tab-pane"
+                            type="button" role="tab" aria-controls="today-tab-pane" aria-selected="false">Today</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tomorrow-tab" data-bs-toggle="tab"
+                            data-bs-target="#tomorrow-tab-pane" type="button" role="tab"
+                            aria-controls="tomorrow-tab-pane" aria-selected="true">Tomorrow</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="other-tab" data-bs-toggle="tab" data-bs-target="#other-tab-pane"
+                            type="button" role="tab" aria-controls="other-tab-pane" aria-selected="false">Other</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="daySelectorContent">
+                    <div class="tab-pane fade" id="today-tab-pane" role="tabpanel" aria-labelledby="today-tab"
+                        tabindex="0">
+                        <p class="text-center mt-2 mb-5">March 21, 2016 <br /> Open 10:30am-5:30pm</p>
+                        <form action="#">
+                            <ul class="list-group pb-4 quantity-selector-list">
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Adults</label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantityAdults"
+                                            aria-label="Adults" placeholder="0">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Seniors <small>65+ with ID</small></label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantitySeniors"
+                                            aria-label="Seniors" placeholder="0" value="2">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Students <small>with ID</small></label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantityStudents"
+                                            aria-label="Students" placeholder="0">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Total</label>
+                                    <div class="total-amount">16</div>
+                                </li>
+                            </ul>
+
+                            <div class="d-grid gap-2 col-md-6 col-lg-3 mx-auto">
+                                <button class="btn btn-lg btn-art-primary" type="button">Continue to Payment</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+
+                    <div class="tab-pane fade show active" id="tomorrow-tab-pane" role="tabpanel"
+                        aria-labelledby="tomorrow-tab" tabindex="0">
+                        <p class="text-center mt-2 mb-5">March 22, 2016 <br /> Open 10:30am-5:30pm</p>
+                        <form action="#">
+                            <ul class="list-group pb-4 quantity-selector-list">
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Adults</label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantityAdults"
+                                            aria-label="Adults" placeholder="0">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Seniors <small>65+ with ID</small></label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantitySeniors"
+                                            aria-label="Seniors" placeholder="0" value="2">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Students <small>with ID</small></label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantityStudents"
+                                            aria-label="Students" placeholder="0">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center d-flex justify-content-between">
+                                    <label class="label">Total</label>
+                                    <div class="total-amount">16</div>
+                                </li>
+                            </ul>
+
+                            <div class="d-grid gap-2 col-md-6 col-lg-3 mx-auto">
+                                <button class="btn btn-lg btn-art-primary" type="button">Continue to Payment</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="other-tab-pane" role="tabpanel" aria-labelledby="other-tab"
+                        tabindex="0">
+                        <p class="text-center mt-2 mb-5">March 23, 2016 <br /> Open 10:30am-5:30pm</p>
+                        <form action="#">
+                            <ul class="list-group pb-4 quantity-selector-list">
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Adults</label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantityAdults"
+                                            aria-label="Adults" placeholder="0">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Seniors <small>65+ with ID</small></label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantitySeniors"
+                                            aria-label="Seniors" placeholder="0" value="2">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border border-0 d-flex align-items-center">
+                                    <label class="label" for="quantityAdults">Students <small>with ID</small></label>
+                                    <div class="input-group">
+                                        <span class="btr btn-outline-light quantity-adjust increase">-</span>
+                                        <input type="number" class="form-control border-0" id="quantityStudents"
+                                            aria-label="Students" placeholder="0">
+                                        <span class="input-group-text quantity-adjust decrease">+</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center d-flex justify-content-between">
+                                    <label class="label">Total</label>
+                                    <div class="total-amount">16</div>
+                                </li>
+                            </ul>
+                            <div class="d-grid gap-2 col-md-6 col-lg-3 mx-auto">
+                                <button class="btn btn-lg btn-art-primary" type="button">Continue to Payment</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
